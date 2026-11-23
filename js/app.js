@@ -48,19 +48,21 @@
     revealIO ? revealIO.observe(el) : el.classList.add("is-in");
   });
 
-  /* ---------- Lazy arch backgrounds ---------- */
-  var bgIO = hasIO && new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (e.isIntersecting) {
-        e.target.style.backgroundImage = "url(" + e.target.getAttribute("data-bg") + ")";
-        bgIO.unobserve(e.target);
-      }
-    });
-  }, { rootMargin: "900px 0px" });
+  /* ---------- Section backgrounds: preload quietly after the page loads, apply once decoded (no pop-in) ---------- */
+  var bgMap = {};
   $$("[data-bg]").forEach(function (el) {
-    if (bgIO) bgIO.observe(el); else el.style.backgroundImage = "url(" + el.getAttribute("data-bg") + ")";
+    var u = el.getAttribute("data-bg");
+    (bgMap[u] = bgMap[u] || []).push(el);
   });
-
+  function loadBgs() {
+    Object.keys(bgMap).forEach(function (u) {
+      var im = new Image();
+      im.onload = function () { bgMap[u].forEach(function (el) { el.style.backgroundImage = "url(" + u + ")"; }); };
+      im.src = u;
+    });
+  }
+  if (document.readyState === "complete") setTimeout(loadBgs, 300);
+  else window.addEventListener("load", function () { setTimeout(loadBgs, 300); });
   /* ---------- Capital first letters in script names ---------- */
   $$(".script").forEach(function (el) {
     var t = el.textContent;
@@ -112,6 +114,14 @@
     else { userMuted = false; startMusic(false); }
   });
 
+  /* ---------- Show intro text only once fonts are ready (no font-swap flicker) ---------- */
+  var fontsShown = false;
+  function showIntroText() { if (!fontsShown) { fontsShown = true; root.classList.add("fonts-ok"); } }
+  setTimeout(showIntroText, 2500); // never wait longer than this
+  if (document.fonts && document.fonts.load) {
+    Promise.all([document.fonts.load("1em Parisienne"), document.fonts.load("1em Cinzel"), document.fonts.load("1em 'Cormorant Garamond'")])
+      .then(showIntroText, showIntroText);
+  } else showIntroText();
   /* ---------- 1. Cinematic intro ---------- */
   var intro = $("#intro"), video = $("#introVideo"), introText = $("#introText");
   var openBtn = $("#openBtn"), skipBtn = $("#skipBtn");
@@ -131,7 +141,11 @@
     }, 1500);
   }
 
-  video.addEventListener("playing", function () { started = true; });
+  // fade the first frame in when it is ready, instead of popping in
+  function videoReady() { video.classList.add("on"); }
+  if (video.readyState >= 2) videoReady(); else video.addEventListener("loadeddata", videoReady);
+  setTimeout(videoReady, 3500);
+  video.addEventListener("playing", function () { started = true; videoReady(); });
   video.addEventListener("ended", finish);
   video.addEventListener("error", function () { videoFailed = true; if (phase === "playing") finish(); });
 
@@ -178,7 +192,9 @@
     var cdTimer = setInterval(function () { if (!tickCountdown()) clearInterval(cdTimer); }, 1000);
   }
 
-  /* ---------- 9. Wishes ---------- */
+  /* ---------- 9. Wishes (only runs if the section is present in the HTML) ---------- */
+  if (document.getElementById("wishForm")) {
+
   var W = D.wishes || {};
   var SUPA = (W.supabaseUrl || "").replace(/\/$/, "");
   var BACKEND = SUPA && W.supabaseAnonKey ? "supabase" : W.endpoint ? "endpoint" : "demo";
@@ -263,4 +279,5 @@
     }).then(function () { btn.disabled = false; btn.textContent = "Submit Wishes"; });
   });
 
+  }
 })();
