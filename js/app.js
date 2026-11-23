@@ -61,6 +61,57 @@
     if (bgIO) bgIO.observe(el); else el.style.backgroundImage = "url(" + el.getAttribute("data-bg") + ")";
   });
 
+  /* ---------- Capital first letters in script names ---------- */
+  $$(".script").forEach(function (el) {
+    var t = el.textContent;
+    if (!/^[A-Za-z][A-Za-z ]*$/.test(t)) return;
+    el.setAttribute("aria-label", t);
+    el.innerHTML = t.replace(/(^|\s)([A-Za-z])/g, function (m, sp, ch) {
+      return sp + '<span class="cap" aria-hidden="true">' + ch + "</span>";
+    });
+  });
+
+  /* ---------- Music (silent until the guest taps; then plays from the start) ---------- */
+  var audio = null, musicOn = false, noteTimer;
+  var mBtn = $("#musicBtn"), mNote = $("#musicNote"), mIcon = $("#musicIcon");
+  function note(t) {
+    mNote.textContent = t; mNote.hidden = false;
+    clearTimeout(noteTimer); noteTimer = setTimeout(function () { mNote.hidden = true; }, 3200);
+  }
+  function setMusic(on) {
+    musicOn = on;
+    mBtn.setAttribute("aria-pressed", on);
+    mBtn.setAttribute("aria-label", "Turn background music " + (on ? "off" : "on"));
+    mIcon.setAttribute("d", on ? "M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" : "M17 9l5 6M22 9l-5 6");
+  }
+  function startMusic(quiet) {
+    if (!D.musicSrc) { if (!quiet) note("Music has not been added to this invitation yet."); return; }
+    if (!audio) {
+      audio = new Audio(); audio.loop = true; audio.preload = "auto";
+      audio.addEventListener("playing", function () { setMusic(true); });
+      audio.addEventListener("pause", function () { setMusic(false); });
+      audio.addEventListener("error", function () { setMusic(false); note("Music could not be loaded."); });
+      audio.src = D.musicSrc;         // a fresh element already starts at 0:00 — no seek needed
+    } else if (audio.currentTime > 0.5) {
+      audio.currentTime = 0;          // only rewind when restarting an element that already played
+    }
+    var pr = audio.play();            // must be called inside a tap handler
+    if (pr && pr.catch) pr.catch(function () {
+      setMusic(false);
+      if (quiet) {
+        // Browser refused (e.g. strict autoplay rules): retry on the guest's next tap
+        var retry = function () { document.removeEventListener("pointerdown", retry, true); if (!musicOn && !userMuted) startMusic(false); };
+        document.addEventListener("pointerdown", retry, true);
+      } else note("Music could not be played.");
+    });
+  }
+  var userMuted = false;              // guest pressed the speaker to turn music off
+  mBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (musicOn && audio) { userMuted = true; audio.pause(); }
+    else { userMuted = false; startMusic(false); }
+  });
+
   /* ---------- 1. Cinematic intro ---------- */
   var intro = $("#intro"), video = $("#introVideo"), introText = $("#introText");
   var openBtn = $("#openBtn"), skipBtn = $("#skipBtn");
@@ -86,6 +137,7 @@
 
   openBtn.addEventListener("click", function () {
     if (phase !== "idle") return;
+    startMusic(true);                // song starts from 0:00 on this tap
     if (videoFailed) return finish();
     phase = "playing";
     introText.classList.add("hide"); // fades out in 0.6s while the curtain starts moving
@@ -96,7 +148,7 @@
     } catch (e) { return finish(); }
     setTimeout(function () { if (!started) finish(); }, 8000); // never trap the guest
   });
-  skipBtn.addEventListener("click", finish);
+  skipBtn.addEventListener("click", function () { if (phase === "idle") startMusic(true); finish(); });
 
   /* ---------- 7. Countdown ---------- */
   var target = new Date(D.countdownTarget).getTime();
@@ -211,26 +263,4 @@
     }).then(function () { btn.disabled = false; btn.textContent = "Submit Wishes"; });
   });
 
-  /* ---------- Music (silent until tapped; nothing downloads before that) ---------- */
-  var audio = null, musicOn = false, noteTimer;
-  var mBtn = $("#musicBtn"), mNote = $("#musicNote"), mIcon = $("#musicIcon");
-  function note(t) {
-    mNote.textContent = t; mNote.hidden = false;
-    clearTimeout(noteTimer); noteTimer = setTimeout(function () { mNote.hidden = true; }, 3200);
-  }
-  function setMusic(on) {
-    musicOn = on;
-    mBtn.setAttribute("aria-pressed", on);
-    mBtn.setAttribute("aria-label", "Turn background music " + (on ? "off" : "on"));
-    mIcon.setAttribute("d", on ? "M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" : "M17 9l5 6M22 9l-5 6");
-  }
-  mBtn.addEventListener("click", function () {
-    if (!D.musicSrc) return note("Music has not been added to this invitation yet.");
-    if (!audio) {
-      audio = new Audio(D.musicSrc); audio.loop = true; audio.preload = "none";
-      audio.addEventListener("error", function () { setMusic(false); note("Music could not be loaded."); });
-    }
-    if (musicOn) { audio.pause(); setMusic(false); }
-    else audio.play().then(function () { setMusic(true); }).catch(function () { note("Music could not be played."); });
-  });
 })();
