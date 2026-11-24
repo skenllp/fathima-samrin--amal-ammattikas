@@ -1,4 +1,4 @@
-/* Central wedding configuration — edit names, times, venue, links and backends here. */
+/* Central wedding configuration — edit names, times, venue and links here. */
 (function () {
   var venueName = "CIAL Convention Centre";
   var venueArea = "Nedumbassery";
@@ -23,15 +23,7 @@
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=" + q
     },
 
-    // Optional background music. Leave "" until you have a LICENSED audio file,
-    // e.g. "assets/music.mp3". It never plays until a guest taps the speaker button.
-    musicSrc: "assets/music.mp3",
-
-    // Wishes backend. Leave all empty for local demo mode (saved only in the visitor's browser).
-    wishes: {
-      supabaseUrl: "",      // e.g. https://xxxx.supabase.co
-      supabaseAnonKey: "",
-      endpoint: ""          // e.g. a Google Apps Script web-app URL
-    }
+    // Background music. It never plays until a guest taps Open Invitation or the speaker button.
+    musicSrc: "assets/music.mp3"
   };
 })();

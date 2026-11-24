@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#F5E9DF" />
+  <meta name="theme-color" content="#F8F1E8" />
   <title>Fathima Samrin &amp; Amal Ammattikas — Wedding Invitation</title>
   <meta name="description" content="You are warmly invited to the wedding of Fathima Samrin and Amal Ammattikas — Thursday, 24 December 2026, CIAL Convention Centre, Nedumbassery." />
   <link rel="canonical" href="https://fathima-amal.vercel.app/" />
@@ -17,296 +17,285 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="The wedding of Fathima Samrin and Amal Ammattikas, 24 December 2026" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Wedding of Fathima Samrin & Amal Ammattikas" />
   <meta name="twitter:image" content="https://fathima-amal.vercel.app/assets/og-image.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Event","name":"Wedding of Fathima Samrin & Amal Ammattikas","startDate":"2026-12-24T17:00:00+05:30","endDate":"2026-12-24T21:30:00+05:30","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"CIAL Convention Centre","address":{"@type":"PostalAddress","addressLocality":"Nedumbassery","addressRegion":"Kerala","addressCountry":"IN"}}}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Parisienne&display=block" rel="stylesheet" />
-  <link rel="preload" as="image" href="assets/ballroom-stage.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Allura&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<!-- Reusable SVG ornaments -->
+<!-- Reusable SVG art: all florals, arches and ornaments are drawn here, so no stage photo is needed -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <symbol id="d-floral" viewBox="0 0 240 24" fill="none" stroke="#C7A26B" stroke-width="1">
-      <path d="M8 12H98M142 12H232M104 12q4-5 8 0M128 12q4 5 8 0"/>
-      <circle cx="4" cy="12" r="1.6" fill="#C7A26B" stroke="none"/><circle cx="236" cy="12" r="1.6" fill="#C7A26B" stroke="none"/>
-      <g transform="translate(120 12)"><path d="M0-8C4-4 4 4 0 8-4 4-4-4 0-8Z"/><path d="M-8 0C-4-4 4-4 8 0 4 4-4 4-8 0Z"/><circle r="1.8" fill="#C7A26B" stroke="none"/></g>
+    <linearGradient id="gold-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9C08A"/><stop offset=".5" stop-color="#B99A65"/><stop offset="1" stop-color="#9C7F4D"/>
+    </linearGradient>
+
+    <!-- divider with a small lotus -->
+    <symbol id="d-floral" viewBox="0 0 240 24" fill="none" stroke="#B99A65" stroke-width="1">
+      <path d="M8 12H98M142 12H232"/>
+      <circle cx="4" cy="12" r="1.6" fill="#B99A65" stroke="none"/><circle cx="236" cy="12" r="1.6" fill="#B99A65" stroke="none"/>
+      <g transform="translate(120 12)"><path d="M0-9C5-4 5 4 0 9-5 4-5-4 0-9Z"/><path d="M-9 0C-4-5 4-5 9 0 4 5-4 5-9 0Z" opacity=".55"/><circle r="2" fill="#B99A65" stroke="none"/></g>
     </symbol>
-    <symbol id="d-islamic" viewBox="0 0 240 24" fill="none" stroke="#C7A26B" stroke-width="1">
-      <path d="M8 12H98M142 12H232M104 12q4-5 8 0M128 12q4 5 8 0"/>
-      <circle cx="4" cy="12" r="1.6" fill="#C7A26B" stroke="none"/><circle cx="236" cy="12" r="1.6" fill="#C7A26B" stroke="none"/>
-      <g transform="translate(120 12)"><rect x="-8" y="-8" width="16" height="16"/><rect x="-8" y="-8" width="16" height="16" transform="rotate(45)"/><circle r="2.2" fill="#C7A26B" stroke="none"/></g>
+    <!-- divider with an eight-point star -->
+    <symbol id="d-islamic" viewBox="0 0 240 24" fill="none" stroke="#B99A65" stroke-width="1">
+      <path d="M8 12H100M140 12H232"/>
+      <circle cx="4" cy="12" r="1.6" fill="#B99A65" stroke="none"/><circle cx="236" cy="12" r="1.6" fill="#B99A65" stroke="none"/>
+      <g transform="translate(120 12)"><rect x="-7" y="-7" width="14" height="14"/><rect x="-7" y="-7" width="14" height="14" transform="rotate(45)"/><circle r="2" fill="#B99A65" stroke="none"/></g>
     </symbol>
+
+    <!-- layered rose -->
     <symbol id="rose" viewBox="-40 -40 80 80">
-      <circle r="40" fill="#E8C4BA" stroke="#B98C79" stroke-opacity=".35"/>
-      <circle cx="2" cy="-2" r="30" fill="#F1D6CD" stroke="#B98C79" stroke-opacity=".3"/>
-      <circle cx="-1" cy="1" r="21" fill="#E4B9AE" stroke="#B98C79" stroke-opacity=".35"/>
-      <path d="M-10 0a10 10 0 1 1 18 5M-4 2a5 5 0 1 1 8 1" stroke="#B98C79" stroke-opacity=".55" fill="none"/>
+      <circle r="40" fill="#E8C9C3"/>
+      <circle cx="2" cy="-2" r="31" fill="#F1D9D3"/>
+      <circle cx="-1" cy="1" r="22" fill="#E3BDB5"/>
+      <circle cx="0" cy="0" r="12" fill="#F4E1DB"/>
+      <path d="M-14 -3a14 14 0 1 1 26 8M-7 3a7 7 0 1 1 12 2" stroke="#B88F86" stroke-opacity=".5" fill="none"/>
     </symbol>
-    <symbol id="floral" viewBox="0 0 220 220">
-      <g fill="#B7B08A" fill-opacity=".55">
-        <ellipse cx="150" cy="40" rx="31" ry="11" transform="rotate(-30 150 40)"/>
-        <ellipse cx="40" cy="150" rx="31" ry="11" transform="rotate(60 40 150)"/>
-        <ellipse cx="120" cy="120" rx="26" ry="9" transform="rotate(20 120 120)"/>
-      </g>
-      <path d="M10 210C60 160 120 120 210 90" stroke="#B7B08A" stroke-opacity=".6" fill="none"/>
-      <g fill="#C7A26B" fill-opacity=".7"><circle cx="185" cy="70" r="4"/><circle cx="195" cy="95" r="4"/><circle cx="70" cy="190" r="4"/><circle cx="92" cy="200" r="4"/></g>
-      <use href="#rose" x="14" y="14" width="92" height="92"/>
-      <use href="#rose" x="92" y="7" width="66" height="66" style="filter:brightness(1.07) saturate(.7)"/>
-      <use href="#rose" x="4" y="92" width="66" height="66" style="filter:brightness(.95)"/>
-      <use href="#rose" x="82" y="77" width="56" height="56" style="filter:brightness(1.05) saturate(.8)"/>
+    <!-- ivory ranunculus -->
+    <symbol id="bloom" viewBox="-40 -40 80 80">
+      <circle r="40" fill="#F8F1E8"/><circle r="31" fill="#F1E4D4"/><circle r="22" fill="#F8F1E8"/><circle r="13" fill="#E9D8C3"/>
+      <path d="M-18 0a18 18 0 0 1 36 0M-10 6a10 10 0 0 0 20 0" stroke="#B99A65" stroke-opacity=".4" fill="none"/>
+    </symbol>
+    <!-- leaf sprig -->
+    <symbol id="sprig" viewBox="0 0 120 60" fill="#B7AE8C" fill-opacity=".55">
+      <path d="M2 55C40 48 80 30 118 4" stroke="#A89F7D" stroke-opacity=".7" fill="none"/>
+      <ellipse cx="30" cy="42" rx="14" ry="5" transform="rotate(-25 30 42)"/><ellipse cx="55" cy="36" rx="14" ry="5" transform="rotate(-48 55 36)"/>
+      <ellipse cx="62" cy="28" rx="14" ry="5" transform="rotate(8 62 28)"/><ellipse cx="88" cy="18" rx="13" ry="5" transform="rotate(-40 88 18)"/>
+      <ellipse cx="96" cy="14" rx="12" ry="4.5" transform="rotate(14 96 14)"/>
+    </symbol>
+    <!-- floral cluster, drawn to sit in a corner -->
+    <symbol id="cluster" viewBox="0 0 260 260">
+      <use href="#sprig" x="10" y="110" width="190" height="95" transform="rotate(8 100 150)"/>
+      <use href="#sprig" x="80" y="10" width="170" height="85" transform="rotate(60 160 50)"/>
+      <use href="#bloom" x="22" y="20" width="120" height="120"/>
+      <use href="#rose" x="102" y="6" width="96" height="96"/>
+      <use href="#rose" x="6" y="118" width="88" height="88"/>
+      <use href="#bloom" x="96" y="96" width="74" height="74"/>
+      <use href="#rose" x="168" y="70" width="52" height="52"/>
+      <use href="#bloom" x="60" y="178" width="52" height="52"/>
+      <g fill="#B99A65" fill-opacity=".75"><circle cx="196" cy="40" r="3"/><circle cx="214" cy="58" r="2.5"/><circle cx="40" cy="206" r="3"/><circle cx="58" cy="228" r="2.5"/><circle cx="150" cy="150" r="2.5"/></g>
+    </symbol>
+
+    <!-- stage arch: nested pointed arch lines -->
+    <symbol id="arch" viewBox="0 0 400 560" fill="none" stroke="#B99A65">
+      <path d="M20 556V240C20 120 110 40 200 8C290 40 380 120 380 240V556" stroke-width="1.6"/>
+      <path d="M44 556V248C44 140 122 66 200 38C278 66 356 140 356 248V556" stroke-width=".9" opacity=".7"/>
+      <path d="M68 556V256C68 160 134 92 200 66C266 92 332 160 332 256V556" stroke-width=".6" opacity=".5"/>
+      <circle cx="200" cy="8" r="3" fill="#B99A65" stroke="none"/>
     </symbol>
   </defs>
 </svg>
 
-<!-- =============== 1. CINEMATIC OPENING =============== -->
-<div id="intro" role="dialog" aria-label="Wedding invitation opening">
-  <video id="introVideo" src="assets/curtain-opening.mp4#t=0.001" muted playsinline webkit-playsinline preload="auto"
-         disablepictureinpicture disableremoteplayback tabindex="-1" aria-hidden="true"></video>
+<!-- =============== 1. OPENING GATE =============== -->
+<div id="gate" role="dialog" aria-label="Wedding invitation opening">
+  <div class="bgimg bg-gate" aria-hidden="true"></div>
+  <div class="gate-glow" aria-hidden="true"></div>
 
-  <div id="introText" class="intro-text">
-    <div class="intro-scrim" aria-hidden="true"></div>
-    <div class="intro-inner">
-      <p class="eyebrow wide">The Wedding Of</p>
-      <h1 class="script intro-name">Fathima Samrin</h1>
-      <p class="script intro-amp">&amp;</p>
-      <h1 class="script intro-name">Amal Ammattikas</h1>
-      <button type="button" id="openBtn" class="btn-gold" aria-label="Open the wedding invitation">Open Invitation</button>
-    </div>
+  <div class="gate-card">
+    <span class="gate-frame" aria-hidden="true"></span>
+    <p class="arabic g1" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <div class="mono g2" aria-hidden="true"><span class="mono-in"><b>F <i>&amp;</i> A</b><small>DEC 2026</small></span></div>
+    <p class="label g3">The Wedding Of</p>
+    <h1 class="script gname g4">Fathima Samrin</h1>
+    <p class="script gamp g5">&amp;</p>
+    <h1 class="script gname g6">Amal Ammattikas</h1>
+    <p class="gdate g7">24 December 2026</p>
+    <button type="button" id="openBtn" class="btn-open g8" aria-label="Open the wedding invitation"><span>OPEN INVITATION</span></button>
+    <p class="label g9 gplace">Nedumbassery · Kerala</p>
   </div>
-
-  <button type="button" id="skipBtn" class="skip" aria-label="Skip the introduction">Skip Intro</button>
 </div>
 
 <main>
   <!-- =============== 2. HERO =============== -->
-  <section id="top" class="hero stage-bg" aria-label="Wedding of Fathima Samrin and Amal Ammattikas">
-    <div class="hero-veil" aria-hidden="true"></div>
-    <div class="hero-veil-top" aria-hidden="true"></div>
-
-    <!-- first three lines, up on the clear ceiling band -->
-    <div class="hero-top">
-      <div class="reveal fade-only" data-d="0">
-        <p class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-        <p class="eyebrow hero-trans">In the name of Allah, the Most Gracious and the Most Merciful</p>
-      </div>
-      <div class="reveal" data-d="900"><p class="eyebrow wide hero-wed">The Wedding Of</p></div>
-    </div>
+  <section id="top" class="hero" aria-label="Wedding of Fathima Samrin and Amal Ammattikas">
+    <div class="bgimg bg-hero" aria-hidden="true"><img src="assets/bg-arch.webp" alt="" width="941" height="1672" fetchpriority="high" decoding="async" /></div>
+    <div class="sparkles" id="sparkles" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <div class="reveal" data-d="1500">
-        <h1 class="script hero-name">Fathima Samrin</h1>
+      <div class="hr" style="--i:0">
+        <p class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <p class="label tight">In the name of Allah, the Most Gracious and the Most Merciful</p>
+      </div>
+      <p class="label wide hr" style="--i:1">The Wedding Of</p>
+      <div class="hr names" style="--i:2">
+        <h1 class="script hname">Fathima Samrin</h1>
         <p class="with">with</p>
-        <h1 class="script hero-name">Amal Ammattikas</h1>
+        <h1 class="script hname">Amal Ammattikas</h1>
       </div>
-      <div class="reveal fade-only" data-d="2300">
-        <svg class="divider small"><use href="#d-islamic"/></svg>
-        <p class="eyebrow wide b">Thursday</p>
-        <p class="heading hero-date b">24 December 2026</p>
-      </div>
-      <div class="reveal fade-only" data-d="3000">
-        <a href="#invitation" class="scroll-cue eyebrow" aria-label="Scroll to explore the invitation">
-          Scroll to explore
-          <svg class="cue" width="16" height="22" viewBox="0 0 16 22" fill="none" stroke="#B98C79" stroke-width="1.2" aria-hidden="true"><path d="M8 1v18M2 13l6 6 6-6"/></svg>
-        </a>
+      <div class="hr" style="--i:3">
+        <svg class="divider"><use href="#d-islamic"/></svg>
+        <p class="label wide">Thursday</p>
+        <p class="hdate">24 December 2026</p>
       </div>
     </div>
+
+    <a href="#invitation" class="scroll-cue hr" style="--i:4" aria-label="Scroll to explore the invitation">
+      <span class="mouse" aria-hidden="true"><i></i></span>
+      <span class="label">Scroll</span>
+    </a>
   </section>
 
   <!-- =============== 3. FORMAL INVITATION =============== -->
-  <section id="invitation" class="arch stage-bg" data-bg="assets/floral-arch.png">
-    <div class="arch-inner">
-      <p class="eyebrow reveal" style="letter-spacing:.34em">With the blessings of Allah</p>
-      <div class="reveal mt-6" data-d="150">
+  <section id="invitation" class="sec sec-ivory">
+    <div class="panel reveal" data-d="0">
+      <span class="panel-corner tl"></span><span class="panel-corner tr"></span><span class="panel-corner bl"></span><span class="panel-corner br"></span>
+      <p class="label wide reveal" data-d="100">With the blessings of Allah</p>
+      <div class="reveal mt-5" data-d="200">
         <p class="host">Mr. Shamsudeen</p><p class="amp-serif">&amp;</p><p class="host">Mrs. Joonu Shamsudeen</p>
       </div>
-      <p class="eyebrow reveal mt-3" data-d="250" style="font-size:.66rem">Vadakkanethil – Excel</p>
-      <svg class="divider reveal mt-5" data-d="350"><use href="#d-floral"/></svg>
-      <p class="body-serif italic reveal mt-5" data-d="450">Have the honour of inviting you and your family to the wedding of our beloved daughter</p>
-      <h2 class="script big-name reveal mt-6" data-d="550">Fathima Samrin</h2>
-      <p class="eyebrow reveal my-2" data-d="650">With</p>
+      <p class="label tight mt-3 reveal" data-d="300">Vadakkanethil – Excel</p>
+      <svg class="divider mt-5 reveal" data-d="350"><use href="#d-floral"/></svg>
+      <p class="body italic mt-5 reveal" data-d="450">Have the honour of inviting you and your family to the wedding of our beloved daughter</p>
+      <h2 class="script big-name mt-6 reveal" data-d="550">Fathima Samrin</h2>
+      <p class="with reveal" data-d="650">with</p>
       <h2 class="script big-name reveal" data-d="750">Amal Ammattikas</h2>
-      <p class="body-serif reveal mt-4" data-d="850">Son of P K Abdul Jabbar &amp; Rahmath Ammattikas, Koilandy</p>
-      <svg class="divider reveal mt-6" data-d="950"><use href="#d-floral"/></svg>
+      <p class="body mt-4 reveal" data-d="850">Son of P K Abdul Jabbar &amp; Rahmath Ammattikas, Koilandy</p>
     </div>
   </section>
 
   <!-- =============== 4. OUR FAMILIES =============== -->
-  <section id="families" class="plain stage-bg" data-bg="assets/floral-arch.png">
-    <div class="wrap wide-wrap">
-      <div class="reveal head"><h2 class="heading">Our Families</h2><svg class="divider mt-4"><use href="#d-floral"/></svg></div>
+  <section id="families" class="sec sec-champagne">
+    <div class="wrap">
+      <div class="head reveal"><h2 class="title">Our Families</h2><svg class="divider"><use href="#d-floral"/></svg></div>
       <div class="family-grid">
-        <article class="card-outline family reveal">
-          <p class="eyebrow rose">Bride's Family</p>
+        <article class="family reveal">
+          <p class="label blush">Bride's Family</p>
           <h3 class="script fam-name">Fathima Samrin</h3>
-          <svg class="divider small my-3"><use href="#d-floral"/></svg>
-          <p class="eyebrow label">Parents</p>
+          <svg class="divider small"><use href="#d-floral"/></svg>
+          <p class="label dim">Parents</p>
           <p class="host sm">Mr. Shamsudeen</p><p class="amp-serif">&amp;</p><p class="host sm">Mrs. Joonu Shamsudeen</p>
-          <p class="eyebrow label mt-7">Granddaughter of</p>
-          <p class="body-serif">V M Ibrahimkutty Haji &amp; Fathima</p>
+          <p class="label dim mt-6">Granddaughter of</p>
+          <p class="body">V M Ibrahimkutty Haji &amp; Fathima</p>
           <p class="amp-serif">and</p>
-          <p class="body-serif">Late Ibrahim Chennoth &amp; Saira Beevi Valiyaveetil</p>
+          <p class="body">Late Ibrahim Chennoth &amp; Saira Beevi Valiyaveetil</p>
         </article>
-        <article class="card-outline family reveal" data-d="150">
-          <p class="eyebrow rose">Groom's Family</p>
+        <article class="family reveal" data-d="150">
+          <p class="label blush">Groom's Family</p>
           <h3 class="script fam-name">Amal Ammattikas</h3>
-          <svg class="divider small my-3"><use href="#d-floral"/></svg>
-          <p class="eyebrow label">Parents</p>
+          <svg class="divider small"><use href="#d-floral"/></svg>
+          <p class="label dim">Parents</p>
           <p class="host sm">P K Abdul Jabbar</p><p class="amp-serif">&amp;</p><p class="host sm">Rahmath Ammattikas, Koilandy</p>
-          <p class="eyebrow label mt-7">Grandson of</p>
-          <p class="body-serif">Late Abdulrahimankutty Kayakkal</p>
+          <p class="label dim mt-6">Grandson of</p>
+          <p class="body">Late Abdulrahimankutty Kayakkal</p>
           <p class="amp-serif">and</p>
-          <p class="body-serif">Late Ibrahim Haji Nandi</p>
+          <p class="body">Late Ibrahim Haji Nandi</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- =============== 5. THE NIKKAH =============== -->
-  <section id="nikkah" class="arch stage-bg" data-bg="assets/floral-arch.png">
-    <div class="arch-wash" aria-hidden="true"></div>
-    <div class="arch-inner">
-      <h2 class="heading reveal">The Nikkah</h2>
-      <svg class="divider reveal mt-3" data-d="150"><use href="#d-islamic"/></svg>
-      <p class="script reveal mt-5" data-d="300" style="font-size:2.2rem;color:var(--rose)">Insha Allah</p>
-      <div class="reveal mt-2" data-d="420">
+  <!-- =============== 5. NIKKAH CEREMONY =============== -->
+  <section id="nikkah" class="sec sec-blush">
+    <div class="wrap narrow">
+      <div class="head reveal"><h2 class="title">The Nikkah</h2><svg class="divider"><use href="#d-islamic"/></svg></div>
+      <p class="script insha reveal" data-d="200">Insha Allah</p>
+      <div class="reveal" data-d="300">
         <p class="host b">Thursday, 24 December 2026</p>
-        <p class="eyebrow rose mt-1">15 Rajab 1448</p>
+        <p class="label blush">15 Rajab 1448</p>
       </div>
-      <p class="heading b reveal mt-5" data-d="540" style="font-size:clamp(1.9rem,8vw,2.6rem);letter-spacing:.12em">5:00 PM</p>
-      <div class="reveal mt-5" data-d="660"><p class="host b">CIAL Convention Centre</p><p class="body-serif">Nedumbassery</p></div>
-      <div class="reveal mt-8" data-d="780">
-        <a class="btn-gold js-maps" href="#" target="_blank" rel="noopener noreferrer" aria-label="View CIAL Convention Centre location on Google Maps (opens in a new tab)">View Location</a>
+      <p class="bigtime reveal" data-d="400">5:00 PM</p>
+      <div class="reveal" data-d="500"><p class="host b">CIAL Convention Centre</p><p class="body">Nedumbassery</p></div>
+      <div class="reveal mt-7" data-d="600">
+        <a class="btn js-maps" href="#" target="_blank" rel="noopener noreferrer" aria-label="View CIAL Convention Centre location on Google Maps (opens in a new tab)">View Location</a>
       </div>
     </div>
   </section>
 
   <!-- =============== 6. WEDDING RECEPTION =============== -->
-  <section id="reception" class="plain stage-bg" data-bg="assets/floral-arch.png">
+  <section id="reception" class="sec sec-ivory">
     <div class="wrap narrow">
-      <div class="reveal head"><h2 class="heading">Wedding Reception</h2><svg class="divider mt-4"><use href="#d-floral"/></svg></div>
-      <div class="reveal text-center mt-8" data-d="150">
+      <div class="head reveal"><h2 class="title">Wedding Reception</h2><svg class="divider"><use href="#d-floral"/></svg></div>
+      <div class="reveal mt-6" data-d="150">
         <p class="script fam-name">Fathima Samrin</p><p class="with">with</p><p class="script fam-name">Amal Ammattikas</p>
       </div>
-
       <div class="timeline">
-        <span class="timeline-line" aria-hidden="true"></span>
+        <span class="tl-line" aria-hidden="true"></span>
         <div class="tl-node reveal" data-d="100">
-          <span class="tl-dot" aria-hidden="true"><i></i></span>
-          <p class="eyebrow rose">The Nikkah · Insha Allah</p>
-          <p class="heading tl-time b">5:00 PM</p>
-          <p class="body-serif b mt-3">Thursday, 24 December 2026</p>
-          <p class="body-serif rose">15 Rajab 1448</p>
-          <p class="body-serif b">CIAL Convention Centre, Nedumbassery</p>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <p class="label blush">The Nikkah · Insha Allah</p>
+          <p class="tl-time">5:00 PM</p>
+          <p class="body b">Thursday, 24 December 2026</p>
+          <p class="body blush">15 Rajab 1448</p>
+          <p class="body b">CIAL Convention Centre, Nedumbassery</p>
         </div>
         <div class="tl-node reveal" data-d="200">
-          <span class="tl-dot" aria-hidden="true"><i></i></span>
-          <p class="eyebrow rose">Wedding Reception</p>
-          <p class="heading tl-time b">6:30 PM – 9:30 PM</p>
-          <p class="body-serif b mt-3">Thursday, 24 December 2026</p>
-          <p class="body-serif b">CIAL Convention Centre</p>
-          <p class="body-serif">Nedumbassery</p>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <p class="label blush">Wedding Reception</p>
+          <p class="tl-time">6:30 PM – 9:30 PM</p>
+          <p class="body b">Thursday, 24 December 2026</p>
+          <p class="body b">CIAL Convention Centre</p>
+          <p class="body">Nedumbassery</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =============== 7. COUNTDOWN =============== -->
-  <section id="countdown" class="plain stage-bg text-center" data-bg="assets/floral-arch.png">
+  <section id="countdown" class="sec sec-champagne">
     <div class="wrap narrow">
-      <div class="reveal"><h2 class="heading">The Countdown</h2><svg class="divider mt-4"><use href="#d-islamic"/></svg></div>
-      <div class="reveal mt-10" data-d="200">
+      <div class="head reveal"><h2 class="title">The Countdown</h2><svg class="divider"><use href="#d-islamic"/></svg></div>
+      <div class="reveal" data-d="200">
         <div id="cdGrid" class="cd-grid" role="timer" aria-live="off">
-          <div class="cd-unit"><span class="cd-num" id="cdDays">00</span><span class="eyebrow cd-label">Days</span></div>
-          <div class="cd-unit"><span class="cd-num" id="cdHours">00</span><span class="eyebrow cd-label">Hours</span></div>
-          <div class="cd-unit"><span class="cd-num" id="cdMinutes">00</span><span class="eyebrow cd-label">Minutes</span></div>
-          <div class="cd-unit"><span class="cd-num" id="cdSeconds">00</span><span class="eyebrow cd-label">Seconds</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdDays">00</span><span class="label">Days</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdHours">00</span><span class="label">Hours</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdMinutes">00</span><span class="label">Minutes</span></div>
+          <div class="cd-box"><span class="cd-num" id="cdSeconds">00</span><span class="label">Seconds</span></div>
         </div>
-        <p id="cdArrived" class="heading" role="status" hidden style="padding:2.5rem 0">Our Special Day Has Arrived</p>
+        <p id="cdArrived" class="title" role="status" hidden>Our Special Day Has Arrived</p>
       </div>
-      <p class="body-serif b reveal mt-8" data-d="350">Thursday, 24 December 2026 · 5:00 PM IST</p>
+      <p class="body b reveal mt-6" data-d="350">Thursday, 24 December 2026 · 5:00 PM IST</p>
     </div>
   </section>
 
-  <!-- =============== 8. THE VENUE =============== -->
-  <section id="venue" class="plain stage-bg text-center" data-bg="assets/floral-arch.png">
+  <!-- =============== 8. VENUE & MAPS =============== -->
+  <section id="venue" class="sec sec-ivory">
     <div class="wrap narrow">
-      <div class="reveal head"><h2 class="heading">The Venue</h2><svg class="divider mt-4"><use href="#d-floral"/></svg></div>
-      <div class="reveal mt-6" data-d="150">
-        <p class="host b" style="font-size:1.7rem">CIAL Convention Centre</p>
-        <p class="body-serif">Nedumbassery, Kerala</p>
+      <div class="head reveal"><h2 class="title">The Venue</h2><svg class="divider"><use href="#d-floral"/></svg></div>
+      <div class="reveal mt-5" data-d="150">
+        <p class="host b big">CIAL Convention Centre</p>
+        <p class="body">Nedumbassery, Kerala</p>
       </div>
-
-      <figure class="card-outline map reveal mt-8" data-d="250"><img src="assets/venue.jpg" width="1400" height="700" loading="lazy" decoding="async" alt="Entrance of CIAL Convention Centre, Nedumbassery, lit up at dusk"></figure>
-
-      <dl class="facts reveal mt-8" data-d="350">
-        <div><dt class="eyebrow">Date</dt><dd class="b">Thursday, 24 December 2026</dd></div>
-        <div><dt class="eyebrow">Nikkah</dt><dd class="b">5:00 PM</dd></div>
-        <div><dt class="eyebrow">Reception</dt><dd class="b">6:30 PM – 9:30 PM</dd></div>
+      <figure class="photo reveal mt-6" data-d="250">
+        <span class="panel-corner tl"></span><span class="panel-corner tr"></span><span class="panel-corner bl"></span><span class="panel-corner br"></span>
+        <img src="assets/venue.jpg" width="1400" height="700" loading="lazy" decoding="async" alt="Entrance of CIAL Convention Centre, Nedumbassery, lit up at dusk" />
+      </figure>
+      <dl class="facts reveal mt-6" data-d="350">
+        <div><dt class="label">Date</dt><dd>Thursday, 24 December 2026</dd></div>
+        <div><dt class="label">Nikkah</dt><dd>5:00 PM</dd></div>
+        <div><dt class="label">Reception</dt><dd>6:30 PM – 9:30 PM</dd></div>
       </dl>
-      <div class="reveal mt-8" data-d="450">
-        <a class="btn-gold js-directions" href="#" target="_blank" rel="noopener noreferrer" aria-label="Get directions to CIAL Convention Centre in Google Maps (opens in a new tab)">Get Directions</a>
+      <div class="reveal mt-7" data-d="450">
+        <a class="btn js-directions" href="#" target="_blank" rel="noopener noreferrer" aria-label="Get directions to CIAL Convention Centre in Google Maps (opens in a new tab)">Get Directions</a>
       </div>
     </div>
   </section>
 
-  <!-- 9. WISHES SECTION — disabled (commented out). To bring it back, delete the opening and closing comment markers around it.
-
-  <section id="wishes" class="plain stage-bg text-center" data-bg="assets/floral-arch.png">
-    <div class="wrap form-wrap">
-      <div class="reveal head">
-        <h2 class="heading">Leave Your Blessings</h2><svg class="divider mt-4"><use href="#d-floral"/></svg>
-        <p class="body-serif italic mt-5">Your heartfelt wishes make our celebration even more meaningful.</p>
-      </div>
-
-      <p id="demoNote" class="demo-note" hidden><strong>Demo preview.</strong> No wishes service is connected yet, so messages are saved only in this browser and are <em>not</em> delivered to the couple.</p>
-
-      <form id="wishForm" class="reveal text-left mt-8" novalidate data-d="150">
-        <div class="fld">
-          <label for="wName" class="eyebrow">Guest Name</label>
-          <input id="wName" name="name" type="text" class="field" maxlength="60" autocomplete="name" placeholder="Your name" />
-          <p class="err" id="wNameErr" role="alert" hidden></p>
-        </div>
-        <div class="fld">
-          <label for="wMsg" class="eyebrow">Your Wishes</label>
-          <textarea id="wMsg" name="message" class="field" rows="5" maxlength="500" placeholder="Write your blessings for the couple…"></textarea>
-          <div class="row-between"><p class="err" id="wMsgErr" role="alert" hidden></p><span id="wCount" class="count">0/500</span></div>
-        </div>
-        <input type="text" name="website" id="wTrap" tabindex="-1" autocomplete="off" aria-hidden="true" class="trap" />
-        <div class="text-center"><button type="submit" id="wSubmit" class="btn-gold">Submit Wishes</button></div>
-        <div id="wStatus" class="status" aria-live="polite"></div>
-      </form>
-
-      <div id="wList" class="wish-list" hidden>
-        <p class="eyebrow text-center" id="wListTitle"></p>
-      </div>
-    </div>
-  </section>
-  END OF WISHES SECTION -->
-
-
-  <!-- =============== 10. CLOSING =============== -->
-  <section id="closing" class="plain stage-bg closing text-center" data-bg="assets/closing-backdrop.png">
-    <div class="petals" aria-hidden="true"></div>
+  <!-- =============== 9. CLOSING =============== -->
+  <section id="closing" class="sec sec-closing">
+    <div class="petals" id="petals" aria-hidden="true"></div>
     <div class="wrap narrow">
-      <p class="eyebrow reveal" style="letter-spacing:.34em">With love and gratitude</p>
-      <div class="reveal mt-6" data-d="200">
-        <p class="script big-name">Fathima Samrin</p><p class="script" style="font-size:2rem;color:var(--rose)">&amp;</p><p class="script big-name">Amal Ammattikas</p>
+      <p class="label wide reveal">With love and gratitude</p>
+      <div class="reveal mt-5" data-d="200">
+        <p class="script big-name">Fathima Samrin</p><p class="script amp-script">&amp;</p><p class="script big-name">Amal Ammattikas</p>
       </div>
-      <div class="reveal mt-6" data-d="400"><svg class="divider"><use href="#d-islamic"/></svg><p class="heading mt-4" style="font-size:1.1rem">24 December 2026</p></div>
-      <p class="body-serif italic reveal mt-6" data-d="550">Your presence and prayers mean the world to us.</p>
-      <div class="reveal mt-14" data-d="700">
-        <p class="eyebrow rose" style="font-size:.6rem">Best compliments from</p>
-        <p class="eyebrow mt-2" style="font-size:.72rem;letter-spacing:.2em">EXCEL GROUP &amp; VADAKKANETHIL FAMILY</p>
+      <div class="reveal mt-5" data-d="400"><svg class="divider"><use href="#d-islamic"/></svg><p class="title small mt-3">24 December 2026</p></div>
+      <p class="body italic reveal mt-5" data-d="550">Your presence and prayers mean the world to us.</p>
+      <div class="reveal mt-9" data-d="700">
+        <p class="label blush tight">Best compliments from</p>
+        <p class="label mt-2">EXCEL GROUP &amp; VADAKKANETHIL FAMILY</p>
       </div>
     </div>
   </section>
 </main>
 
-<!-- Optional music (silent until tapped) -->
+<!-- Music: silent until the guest taps -->
 <div id="music" class="music" hidden>
   <p id="musicNote" class="music-note" role="status" hidden></p>
   <button type="button" id="musicBtn" aria-pressed="false" aria-label="Turn background music on">
