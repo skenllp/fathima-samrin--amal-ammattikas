@@ -20,12 +20,11 @@
   <meta name="twitter:title" content="The Wedding of Fathima Samrin & Amal Ammattikas" />
   <meta name="twitter:image" content="https://fathima-amal.vercel.app/assets/og-image.jpg" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Event","name":"Wedding of Fathima Samrin & Amal Ammattikas","startDate":"2026-12-24T17:00:00+05:30","endDate":"2026-12-24T21:30:00+05:30","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"CIAL Convention Centre","address":{"@type":"PostalAddress","addressLocality":"Nedumbassery","addressRegion":"Kerala","addressCountry":"IN"}}}
+  {"@context":"https://schema.org","@type":"Event","name":"Wedding of Fathima Samrin & Amal Ammattikas","startDate":"2026-12-24T17:00:00+05:30","endDate":"2026-12-24T22:00:00+05:30","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"CIAL Convention Centre","address":{"@type":"PostalAddress","addressLocality":"Nedumbassery","addressRegion":"Kerala","addressCountry":"IN"}}}
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Allura&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/trajanpro-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/trajanpro-bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -100,12 +99,10 @@
 
   <div class="gate-card">
     <span class="gate-frame" aria-hidden="true"></span>
-    <p class="arabic g1" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <p class="label bismi g1">In the name of Allah</p>
     <div class="mono g2" aria-hidden="true"><span class="mono-in"><b>F <i>&amp;</i> A</b><small>DEC 2026</small></span></div>
     <p class="label g3">The Wedding Of</p>
-    <h1 class="script gname g4">Fathima Samrin</h1>
-    <p class="script gamp g5">&amp;</p>
-    <h1 class="script gname g6">Amal Ammattikas</h1>
+    <h1 class="tname gname g4" data-fit>Fathima Samrin &amp; Amal Ammattikas</h1>
     <p class="gdate g7">24 December 2026</p>
     <button type="button" id="openBtn" class="btn-open g8" aria-label="Open the wedding invitation"><span>OPEN INVITATION</span></button>
     <p class="label g9 gplace">Nedumbassery · Kerala</p>
@@ -121,13 +118,11 @@
     <div class="hero-content">
       <div class="hr" style="--i:0">
         <p class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-        <p class="label tight">In the name of Allah, the Most Gracious and the Most Merciful</p>
+        <p class="label bismi">In the name of Allah</p>
       </div>
       <p class="label wide hr" style="--i:1">The Wedding Of</p>
       <div class="hr names" style="--i:2">
-        <h1 class="script hname">Fathima Samrin</h1>
-        <p class="with">with</p>
-        <h1 class="script hname">Amal Ammattikas</h1>
+        <h1 class="tname hname" data-fit>Fathima Samrin &amp; Amal Ammattikas</h1>
       </div>
       <div class="hr" style="--i:3">
         <svg class="divider"><use href="#d-islamic"/></svg>
@@ -148,14 +143,12 @@
       <span class="panel-corner tl"></span><span class="panel-corner tr"></span><span class="panel-corner bl"></span><span class="panel-corner br"></span>
       <p class="label wide reveal" data-d="100">With the blessings of Allah</p>
       <div class="reveal mt-5" data-d="200">
-        <p class="host">Mr. Shamsudeen</p><p class="amp-serif">&amp;</p><p class="host">Mrs. Joonu Shamsudeen</p>
-      </div>
+        <p class="pname" data-fit>Mr. Shamsudeen &amp; Mrs. Joonu Shamsudeen</p>
+        </div>
       <p class="label tight mt-3 reveal" data-d="300">Vadakkanethil – Excel</p>
       <svg class="divider mt-5 reveal" data-d="350"><use href="#d-floral"/></svg>
       <p class="body italic mt-5 reveal" data-d="450">Have the honour of inviting you and your family to the wedding of our beloved daughter</p>
-      <h2 class="script big-name mt-6 reveal" data-d="550">Fathima Samrin</h2>
-      <p class="with reveal" data-d="650">with</p>
-      <h2 class="script big-name reveal" data-d="750">Amal Ammattikas</h2>
+      <h2 class="tname big mt-6 reveal" data-d="550" data-fit>Fathima Samrin &amp; Amal Ammattikas</h2>
       <p class="body mt-4 reveal" data-d="850">Son of P K Abdul Jabbar &amp; Rahmath Ammattikas, Koilandy</p>
     </div>
   </section>
@@ -167,10 +160,10 @@
       <div class="family-grid">
         <article class="family reveal">
           <p class="label blush">Bride's Family</p>
-          <h3 class="script fam-name">Fathima Samrin</h3>
+          <h3 class="tname">Fathima Samrin</h3>
           <svg class="divider small"><use href="#d-floral"/></svg>
           <p class="label dim">Parents</p>
-          <p class="host sm">Mr. Shamsudeen</p><p class="amp-serif">&amp;</p><p class="host sm">Mrs. Joonu Shamsudeen</p>
+          <p class="pname" data-fit>Mr. Shamsudeen &amp; Mrs. Joonu Shamsudeen</p>
           <p class="label dim mt-6">Granddaughter of</p>
           <p class="body">V M Ibrahimkutty Haji &amp; Fathima</p>
           <p class="amp-serif">and</p>
@@ -178,10 +171,10 @@
         </article>
         <article class="family reveal" data-d="150">
           <p class="label blush">Groom's Family</p>
-          <h3 class="script fam-name">Amal Ammattikas</h3>
+          <h3 class="tname">Amal Ammattikas</h3>
           <svg class="divider small"><use href="#d-floral"/></svg>
           <p class="label dim">Parents</p>
-          <p class="host sm">P K Abdul Jabbar</p><p class="amp-serif">&amp;</p><p class="host sm">Rahmath Ammattikas, Koilandy</p>
+          <p class="pname" data-fit>P K Abdul Jabbar &amp; Rahmath Ammattikas, Koilandy</p>
           <p class="label dim mt-6">Grandson of</p>
           <p class="body">Late Abdulrahimankutty Kayakkal</p>
           <p class="amp-serif">and</p>
@@ -191,7 +184,7 @@
     </div>
   </section>
 
-  <!-- =============== 5. NIKKAH CEREMONY =============== -->
+  <!-- 5. NIKKAH CEREMONY SECTION (hidden on request — delete the comment markers to bring it back)
   <section id="nikkah" class="sec sec-blush">
     <div class="wrap narrow">
       <div class="head reveal"><h2 class="title">The Nikkah</h2><svg class="divider"><use href="#d-islamic"/></svg></div>
@@ -207,16 +200,18 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- =============== 6. WEDDING RECEPTION =============== -->
   <section id="reception" class="sec sec-ivory">
     <div class="wrap narrow">
       <div class="head reveal"><h2 class="title">Wedding Reception</h2><svg class="divider"><use href="#d-floral"/></svg></div>
       <div class="reveal mt-6" data-d="150">
-        <p class="script fam-name">Fathima Samrin</p><p class="with">with</p><p class="script fam-name">Amal Ammattikas</p>
+        <p class="tname big" data-fit>Fathima Samrin &amp; Amal Ammattikas</p>
       </div>
       <div class="timeline">
         <span class="tl-line" aria-hidden="true"></span>
+        <!-- Nikkah timeline entry (hidden on request)
         <div class="tl-node reveal" data-d="100">
           <span class="tl-dot" aria-hidden="true"></span>
           <p class="label blush">The Nikkah · Insha Allah</p>
@@ -225,10 +220,11 @@
           <p class="body blush">15 Rajab 1448</p>
           <p class="body b">CIAL Convention Centre, Nedumbassery</p>
         </div>
+        -->
         <div class="tl-node reveal" data-d="200">
           <span class="tl-dot" aria-hidden="true"></span>
           <p class="label blush">Wedding Reception</p>
-          <p class="tl-time">6:30 PM – 9:30 PM</p>
+          <p class="tl-time">7:00 PM – 10:00 PM</p>
           <p class="body b">Thursday, 24 December 2026</p>
           <p class="body b">CIAL Convention Centre</p>
           <p class="body">Nedumbassery</p>
@@ -266,11 +262,13 @@
         <span class="panel-corner tl"></span><span class="panel-corner tr"></span><span class="panel-corner bl"></span><span class="panel-corner br"></span>
         <img src="assets/venue.jpg" width="1400" height="700" loading="lazy" decoding="async" alt="Entrance of CIAL Convention Centre, Nedumbassery, lit up at dusk" />
       </figure>
+      <!-- Date and time facts (hidden on request)
       <dl class="facts reveal mt-6" data-d="350">
         <div><dt class="label">Date</dt><dd>Thursday, 24 December 2026</dd></div>
         <div><dt class="label">Nikkah</dt><dd>5:00 PM</dd></div>
         <div><dt class="label">Reception</dt><dd>6:30 PM – 9:30 PM</dd></div>
       </dl>
+      -->
       <div class="reveal mt-7" data-d="450">
         <a class="btn js-directions" href="#" target="_blank" rel="noopener noreferrer" aria-label="Get directions to CIAL Convention Centre in Google Maps (opens in a new tab)">Get Directions</a>
       </div>
@@ -281,15 +279,12 @@
   <section id="closing" class="sec sec-closing">
     <div class="petals" id="petals" aria-hidden="true"></div>
     <div class="wrap narrow">
-      <p class="label wide reveal">With love and gratitude</p>
-      <div class="reveal mt-5" data-d="200">
-        <p class="script big-name">Fathima Samrin</p><p class="script amp-script">&amp;</p><p class="script big-name">Amal Ammattikas</p>
-      </div>
-      <div class="reveal mt-5" data-d="400"><svg class="divider"><use href="#d-islamic"/></svg><p class="title small mt-3">24 December 2026</p></div>
-      <p class="body italic reveal mt-5" data-d="550">Your presence and prayers mean the world to us.</p>
-      <div class="reveal mt-9" data-d="700">
+      <p class="thanks reveal">With love and gratitude</p>
+      <svg class="divider reveal" data-d="200"><use href="#d-islamic"/></svg>
+      <div class="compliment reveal mt-7" data-d="400">
+        <span class="panel-corner tl"></span><span class="panel-corner tr"></span><span class="panel-corner bl"></span><span class="panel-corner br"></span>
         <p class="label blush tight">Best compliments from</p>
-        <p class="label mt-2">EXCEL GROUP &amp; VADAKKANETHIL FAMILY</p>
+        <p class="compliment-names">Excel Group &amp; Vadakkanethil Family</p>
       </div>
     </div>
   </section>

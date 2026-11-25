@@ -15,15 +15,28 @@
   $$(".js-maps").forEach(function (a) { a.href = mapsUrl; });
   $$(".js-directions").forEach(function (a) { a.href = dirUrl; });
 
-  /* ---------- Script names: serif capital first letters ---------- */
-  $$(".script").forEach(function (el) {
-    var t = el.textContent;
-    if (!/^[A-Za-z][A-Za-z ]*$/.test(t)) return;
-    el.setAttribute("aria-label", t);
-    el.innerHTML = t.replace(/(^|\s)([A-Za-z])/g, function (m, sp, ch) {
-      return sp + '<span class="cap" aria-hidden="true">' + ch + "</span>";
+  /* ---------- Fit the couple's names on ONE line, whatever the screen or font ---------- */
+  function fitNames() {
+    $$("[data-fit]").forEach(function (el) {
+      el.style.fontSize = "";
+      var p = el.parentElement, cs = getComputedStyle(p);
+      var avail = p.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      var size = parseFloat(getComputedStyle(el).fontSize), guard = 0, r = document.createRange();
+      function width() { r.selectNodeContents(el); return r.getBoundingClientRect().width; }
+      var w = width();
+      while (avail > 0 && w > avail && size > 6.5 && guard++ < 10) {
+        size = Math.max(6.5, size * (avail / w) * 0.99);
+        el.style.fontSize = size + "px";
+        w = width();
+      }
     });
-  });
+  }
+  var fitTimer;
+  window.addEventListener("resize", function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitNames, 120); });
+  window.addEventListener("orientationchange", function () { setTimeout(fitNames, 250); });
+  fitNames();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitNames);
+  window.addEventListener("load", fitNames);
 
   /* ---------- Ambient particles ---------- */
   if (!reduce) {
