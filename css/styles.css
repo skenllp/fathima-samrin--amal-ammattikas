@@ -120,9 +120,10 @@ a{color:inherit}
 body.ready .hr{animation:fadeUp 1.2s var(--ease) calc(.35s + var(--i,0)*.45s) forwards}
 .scroll-cue{position:absolute;bottom:1.8rem;left:50%;translate:-50% 0;z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;text-decoration:none}
 .scroll-cue .label{font-size:.6rem}
-.mouse{width:22px;height:36px;border:1px solid var(--gold);border-radius:12px;display:flex;justify-content:center;padding-top:6px}
-.mouse i{width:2px;height:7px;border-radius:2px;background:var(--gold);animation:wheel 2s ease-in-out infinite}
-@keyframes wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+.scroll-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(255,249,241,.9);color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 18px -8px rgba(110,85,71,.5);transition:background .3s,color .3s}
+.scroll-cue:hover .scroll-arrow{background:var(--gold);color:#fff}
+.scroll-arrow svg{animation:nudge 1.8s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
 
 /* ---------- sections ---------- */
 .sec{position:relative;overflow:clip;padding:clamp(4.5rem,12vw,7rem) 1.4rem;text-align:center}
@@ -275,7 +276,7 @@ body.ready .hr{animation:fadeUp 1.2s var(--ease) calc(.35s + var(--i,0)*.45s) fo
   .gate-card{padding:1.4rem 1rem 1.2rem}.mono{display:none}.gdate{margin:.6rem 0 1rem}.gplace{margin-top:.8rem}
   .hero-content{padding-top:5.5rem;padding-bottom:6.5rem}
 }
-@media (max-height:700px){.scroll-cue{display:none}}
+@media (max-height:700px){.scroll-cue{bottom:.9rem}.scroll-cue .label{display:none}.scroll-arrow{width:40px;height:40px}}
 @media (max-width:719px){
   .sec-closing{padding-top:9.5rem;padding-bottom:17rem}
   .sec-closing .wrap::before{inset:-1.5rem -1rem;background:radial-gradient(ellipse at center,rgba(255,249,241,.92) 0,rgba(255,249,241,.7) 55%,rgba(255,249,241,0) 80%)}
