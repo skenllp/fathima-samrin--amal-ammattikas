@@ -118,11 +118,10 @@ a{color:inherit}
 /* staged reveal — plays when the gate opens */
 .hr{opacity:0;transform:translate3d(0,16px,0)}
 body.ready .hr{animation:fadeUp 1.2s var(--ease) calc(.35s + var(--i,0)*.45s) forwards}
-.scroll-cue{position:absolute;bottom:1.8rem;left:50%;translate:-50% 0;z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;text-decoration:none}
-.scroll-cue .label{font-size:.6rem}
-.scroll-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:rgba(255,249,241,.9);color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 18px -8px rgba(110,85,71,.5);transition:background .3s,color .3s}
-.scroll-cue:hover .scroll-arrow{background:var(--gold);color:#fff}
-.scroll-arrow svg{animation:nudge 1.8s ease-in-out infinite}
+.scroll-cue{position:absolute;bottom:1.8rem;left:50%;translate:-50% 0;z-index:3;text-decoration:none;border-radius:999px}
+.scroll-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;min-height:44px;padding:0 1.2rem 0 1.4rem;border-radius:999px;border:1px solid var(--gold);background:rgba(255,249,241,.9);color:var(--ink);font-family:var(--label);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;box-shadow:0 6px 18px -8px rgba(110,85,71,.5);transition:background .3s,color .3s}
+.scroll-cue:hover .scroll-btn{background:var(--gold);color:#fff}
+.scroll-btn svg{animation:nudge 1.8s ease-in-out infinite}
 @keyframes nudge{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
 
 /* ---------- sections ---------- */
@@ -276,7 +275,7 @@ body.ready .hr{animation:fadeUp 1.2s var(--ease) calc(.35s + var(--i,0)*.45s) fo
   .gate-card{padding:1.4rem 1rem 1.2rem}.mono{display:none}.gdate{margin:.6rem 0 1rem}.gplace{margin-top:.8rem}
   .hero-content{padding-top:5.5rem;padding-bottom:6.5rem}
 }
-@media (max-height:700px){.scroll-cue{bottom:.9rem}.scroll-cue .label{display:none}.scroll-arrow{width:40px;height:40px}}
+@media (max-height:700px){.scroll-cue{bottom:.9rem}.scroll-btn{min-height:40px}}
 @media (max-width:719px){
   .sec-closing{padding-top:9.5rem;padding-bottom:17rem}
   .sec-closing .wrap::before{inset:-1.5rem -1rem;background:radial-gradient(ellipse at center,rgba(255,249,241,.92) 0,rgba(255,249,241,.7) 55%,rgba(255,249,241,0) 80%)}
