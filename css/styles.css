@@ -429,4 +429,4 @@ body{font-size:1rem;line-height:1.7;letter-spacing:.03em}
 .timeline .tl-node:last-child{padding-bottom:0}
 
 /* logo in the compliments box */
-.compliment-logo{display:block;width:min(7rem,40%);height:auto;margin:1rem auto .6rem}
+.compliment-logo{display:block;width:min(7rem,40%);height:auto;margin:.6rem auto 0}
